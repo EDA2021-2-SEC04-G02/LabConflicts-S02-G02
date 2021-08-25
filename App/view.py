@@ -64,8 +64,8 @@ def loadBookTags():
     """
     Cargar los Tags de libros
     """
-    print("Último libro cargado: " + str(lt.lastElement(books)))
     
+    return controller.loadBooks('GoodReads/book_tags-small.csv')
 
 
 """
@@ -79,6 +79,12 @@ while True:
         books = loadBooks()
         print('Total de libros cargados: ' + str(lt.size(books)))
 
+        
+        print('Primer libro cargado: ' + str(lt.firstElement(books)))
+        
+        print("Último libro cargado: " + str(lt.lastElement(books)))
+    
+    
 
     elif int(inputs[0]) == 2:
         print("Cargando información de tags....")
